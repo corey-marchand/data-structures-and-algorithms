@@ -112,6 +112,17 @@ The input and output of this function are the same as the input and output from 
 
 const hasChildrenEntries = (arr, character) => {
   // Solution code here...
+  let temp = false;
+  let tempArr = Object.entries(arr);
+
+  for (let i = 0; i < tempArr.length; i++){
+    if (tempArr[i][1].name === character){
+      if(tempArr[i][1].children.length > 0){
+        temp = true;
+      }
+    }
+  }
+  return temp;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -122,6 +133,7 @@ Write a function named totalCharacters that takes in an array and returns the nu
 
 const totalCharacters = (arr) => {
   // Solution code here...
+
 };
 
 /* ------------------------------------------------------------------------------------------------
