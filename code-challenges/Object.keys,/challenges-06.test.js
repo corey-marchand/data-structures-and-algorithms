@@ -1,5 +1,7 @@
 'use strict';
 
+// import { summarizers } from "istanbul-lib-report";
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1
 
@@ -132,8 +134,19 @@ Write a function named totalCharacters that takes in an array and returns the nu
 ------------------------------------------------------------------------------------------------ */
 
 const totalCharacters = (arr) => {
+  let num = 0;
   // Solution code here...
-
+  Object.values(arr).forEach(value => {
+    for(let i = 0; i < 3; i++){
+      if(i === 2){
+        num += Object.values(value)[i].length;
+      }
+      else if(Object.values(value)[i] !== null ){
+        num += 1;
+      }
+    }
+  })
+  return num;
 };
 
 /* ------------------------------------------------------------------------------------------------
